@@ -1,0 +1,31 @@
+.floating-alert {
+    position: absolute; /* Tetapkan posisi tetap */
+    z-index: 10; /* Pastikan alert berada di atas elemen lain */
+    animation: fadeInOut 2s ease-in-out forwards; /* Tambahkan animasi */
+    align-items: center; /* Pusatkan konten secara vertikal */
+    display: flex;
+    pointer-events: none; /* Hindari interaksi dengan pointer */
+    text-align: center; /* Teks di tengah secara horizontal */
+    width: 100%;
+}
+
+
+/* Animasi fade in dan fade out */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px); /* Geser sedikit ke atas */
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(5px);
+    }
+    70% {
+        opacity: 1;
+        transform: translateY(5px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10px); /* Geser sedikit ke atas lagi */
+    }
+}
